@@ -115,7 +115,7 @@ function App() {
     <main>
       <form className="submain-one-form" onSubmit={handleSubmit}>
         <header className="submain-one-form-header">
-          <h1>Pick-A-Location</h1>
+          <h1>Pick-A-Country</h1>
         </header>
         <Select
           type="text"
@@ -124,7 +124,6 @@ function App() {
           onChange={handleCountryChange}
           options={countries}
           styles={customStyles}
-          className="submain-one-form-body-subsection-select"
         />
         {states?.length !== ZERO && (
           <Select
@@ -133,19 +132,17 @@ function App() {
             onChange={handleStateChange}
             options={states}
             styles={customStyles}
-            className="submain-one-form-body-subsection-select"
           />
         )}
 
         {lgas && lgas?.length !== ZERO && (
           <Select
-            placeholder="Select a Substate"
+            placeholder="Select a City"
             id="name"
             onChange={handleLGAChange}
             options={lgas}
             styles={customStyles}
-            className="submain-one-form-body-subsection-select"
-          />
+            />
         )}
         {!true && lga}
       </form>
